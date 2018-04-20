@@ -1,4 +1,4 @@
-package com.xh.basic.config;
+package com.xh.basic.datasource.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;

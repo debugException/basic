@@ -1,4 +1,4 @@
-package com.xh.basic.aop;
+package com.xh.basic.datasource.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

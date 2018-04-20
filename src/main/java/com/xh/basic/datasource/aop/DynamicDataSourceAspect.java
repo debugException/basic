@@ -1,5 +1,6 @@
-package com.xh.basic.aop;
+package com.xh.basic.datasource.aop;
 
+import com.xh.basic.datasource.annotation.DataSourceTarget;
 import com.xh.basic.datasource.DynamicDataSourceContextHolder;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
@@ -22,7 +23,7 @@ import java.lang.reflect.Method;
 @Component
 public class DynamicDataSourceAspect {
 
-    @Before("@annotation(DataSourceTarget)")
+    @Before("@annotation(com.xh.basic.datasource.annotation.DataSourceTarget)")
     public void beforeSwitchDataSource(JoinPoint joinpoint){
         //获取当前访问的class
         Class<?> className = joinpoint.getTarget().getClass();
@@ -49,7 +50,7 @@ public class DynamicDataSourceAspect {
         DynamicDataSourceContextHolder.setDataSource(dataSource);
     }
 
-    @After("@annotation(DataSourceTarget)")
+    @After("@annotation(com.xh.basic.datasource.annotation.DataSourceTarget)")
     public void afterSwitchDataSource(JoinPoint point){
         DynamicDataSourceContextHolder.clearDataSource();
     }

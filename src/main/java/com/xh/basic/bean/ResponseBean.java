@@ -38,15 +38,15 @@ public class ResponseBean {
         this.data = data;
     }
 
-    private ResponseBean rtnSuccess(Object obj){
+    public ResponseBean rtnSuccess(Object obj){
         ResponseBean responseBean = new ResponseBean();
-        responseBean.setCode(200);
+        responseBean.setCode(0);
         responseBean.setMsg("success");
         responseBean.setData(obj);
         return responseBean;
     }
 
-    private ResponseBean rtnError(Integer code, String msg){
+    public ResponseBean rtnError(Integer code, String msg){
         ResponseBean responseBean = new ResponseBean();
         responseBean.setCode(code);
         responseBean.setMsg(msg);

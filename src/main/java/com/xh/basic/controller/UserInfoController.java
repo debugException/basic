@@ -1,7 +1,8 @@
 package com.xh.basic.controller;
 
 import com.xh.basic.bean.ResponseBean;
-import com.xh.basic.model.UserInfo;
+import com.xh.basic.redis.annotation.MCache;
+import com.xh.basic.redis.service.RedisService;
 import com.xh.basic.service.UserInfoService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,9 +25,10 @@ public class UserInfoController {
     }
 
     @PostMapping("/selectById")
+    @MCache(keyOrIdx = "0", cacheGroup = "userInfo")
     public ResponseBean selectById(Integer id){
         ResponseBean responseBean =  new ResponseBean();
-        responseBean.setData(userInfoService.selectById(id));
+        responseBean = responseBean.rtnSuccess(userInfoService.selectById(id));
         return responseBean;
     }
 }

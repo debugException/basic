@@ -1,4 +1,4 @@
-package com.xh.basic.config;
+package com.xh.basic.datasource.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
