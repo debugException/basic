@@ -28,7 +28,12 @@ public class DynamicDataSourceContextHolder {
 
     //获取数据源名
     public static String getDataSource(){
-        return (contextHolder.get());
+        String dataSource = contextHolder.get();
+        if (dataSource!=null && dataSource.length()>0){
+            return dataSource;
+        }else{
+            return DEFAULT_DATASOURCE;
+        }
     }
 
     //清楚数据源名

@@ -30,7 +30,6 @@ public class DruidConfig {
     private Environment environment;
 
     @Bean("primaryDataSource")
-    @Primary
     @ConfigurationProperties(prefix = "spring.datasource.primary")
     public DruidDataSource primaryDataSource(){
         return DruidDataSourceBuilder.create().build();
@@ -43,6 +42,7 @@ public class DruidConfig {
     }
 
     @Bean(name = "dynamicDataSource")
+    @Primary
     public AbstractRoutingDataSource dataSource(){
         DynamicDataSource dynamicDataSource = new DynamicDataSource();
         dynamicDataSource.setDefaultTargetDataSource(primaryDataSource());
