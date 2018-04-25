@@ -1,7 +1,6 @@
 package com.xh.basic.model;
 
 public class UserInfo {
-
     private Integer id;
 
     private String userName;
@@ -19,6 +18,6 @@ public class UserInfo {
     }
 
     public void setUserName(String userName) {
-        this.userName = userName;
+        this.userName = userName == null ? null : userName.trim();
     }
 }

@@ -18,6 +18,11 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Override
     @DataSourceTarget("slave")
     public UserInfo selectById(Integer id) {
-        return userInfoMapper.selectById(id);
+        return userInfoMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public UserInfo selectByUserName(String userName) {
+        return null;
     }
 }

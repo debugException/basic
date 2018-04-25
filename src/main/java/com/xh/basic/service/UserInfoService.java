@@ -5,4 +5,6 @@ import com.xh.basic.model.UserInfo;
 public interface UserInfoService {
 
     UserInfo selectById(Integer id);
+
+    UserInfo selectByUserName(String userName);
 }

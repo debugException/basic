@@ -1,12 +1,17 @@
 package com.xh.basic.dao;
 
 import com.xh.basic.model.UserInfo;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.beans.factory.annotation.Qualifier;
 
-@Mapper
 public interface UserInfoMapper {
+    int deleteByPrimaryKey(Integer id);
 
-    UserInfo selectById(@Param("id") Integer id);
+    int insert(UserInfo record);
+
+    int insertSelective(UserInfo record);
+
+    UserInfo selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKeySelective(UserInfo record);
+
+    int updateByPrimaryKey(UserInfo record);
 }

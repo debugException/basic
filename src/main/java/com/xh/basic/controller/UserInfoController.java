@@ -31,4 +31,12 @@ public class UserInfoController {
         responseBean = responseBean.rtnSuccess(userInfoService.selectById(id));
         return responseBean;
     }
+
+    @PostMapping("/selectByUserName")
+    @MCache(keyOrIdx = "0", cacheGroup = "userInfo")
+    public ResponseBean selectByUserName(String userName){
+        ResponseBean responseBean =  new ResponseBean();
+        responseBean = responseBean.rtnSuccess(userInfoService.selectByUserName(userName));
+        return responseBean;
+    }
 }
