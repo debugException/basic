@@ -6,6 +6,7 @@ import com.xh.basic.dao.UserInfoMapper;
 import com.xh.basic.model.UserInfo;
 import com.xh.basic.service.UserInfoService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -17,6 +18,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 
     @Override
     @DataSourceTarget("slave")
+    @Transactional
     public UserInfo selectById(Integer id) {
         return userInfoMapper.selectByPrimaryKey(id);
     }

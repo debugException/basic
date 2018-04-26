@@ -11,7 +11,9 @@ import java.text.SimpleDateFormat;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * @author szq
  * @Package com.xh.basic.redis.util
@@ -26,7 +28,7 @@ public class ReflectionUtils {
 
     private static final String CGLIB_CLASS_SEPARATOR = "$$";
 
-    private static final Logger logger = Logger.getLogger(ReflectionUtils.class);
+    private static final Logger logger = LoggerFactory.getLogger(ReflectionUtils.class);
     /**
      * 调用Getter方法.
      * 支持多级，如：对象名.对象名.方法
