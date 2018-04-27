@@ -1,0 +1,392 @@
+2018-04-26 13:19:11,267  INFO BasicApplication:48 -Starting BasicApplication on PC-20151125WOSC with PID 11152 (E:\idea\basic\target\classes started by Administrator in E:\idea\basic)
+2018-04-26 13:19:11,270  INFO BasicApplication:597 -The following profiles are active: local
+2018-04-26 13:19:11,462  INFO AnnotationConfigEmbeddedWebApplicationContext:583 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6fa7362e: startup date [Thu Apr 26 13:19:11 CST 2018]; root of context hierarchy
+2018-04-26 13:19:11,877  INFO Version:30 -HV000001: Hibernate Validator 5.3.6.Final
+2018-04-26 13:19:13,852  INFO RepositoryConfigurationDelegate:165 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-04-26 13:19:14,670  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aeceb657] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-26 13:19:15,535  INFO TomcatEmbeddedServletContainer:89 -Tomcat initialized with port(s): 8080 (http)
+2018-04-26 13:19:15,895  INFO ContextLoader:276 -Root WebApplicationContext: initialization completed in 4440 ms
+2018-04-26 13:19:16,663  INFO ServletRegistrationBean:190 -Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-26 13:19:16,665  INFO ServletRegistrationBean:190 -Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-04-26 13:19:16,668  INFO FilterRegistrationBean:258 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-26 13:19:16,669  INFO FilterRegistrationBean:258 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-26 13:19:16,669  INFO FilterRegistrationBean:258 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-26 13:19:16,669  INFO FilterRegistrationBean:258 -Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-26 13:19:16,669  INFO FilterRegistrationBean:271 -Mapping filter: 'webStatFilter' to urls: [/*]
+2018-04-26 13:19:18,111  INFO SessionFactoryConfig:42 -createSqlSessionFactoryBean method
+2018-04-26 13:19:20,046  INFO RequestMappingHandlerAdapter:534 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6fa7362e: startup date [Thu Apr 26 13:19:11 CST 2018]; root of context hierarchy
+2018-04-26 13:19:20,113  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectById],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectById(java.lang.Integer)
+2018-04-26 13:19:20,114  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectByUserName],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectByUserName(java.lang.String)
+2018-04-26 13:19:20,114  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/hello],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.hello()
+2018-04-26 13:19:20,116  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-26 13:19:20,116  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-26 13:19:20,142  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:19:20,142  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:19:20,170  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:19:20,735  INFO OptionalLiveReloadServer:58 -LiveReload server is running on port 35729
+2018-04-26 13:19:20,789  INFO AnnotationMBeanExporter:431 -Registering beans for JMX exposure on startup
+2018-04-26 13:19:20,790  INFO AnnotationMBeanExporter:916 -Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-04-26 13:19:20,790  INFO AnnotationMBeanExporter:916 -Bean with name 'slaveDataSource' has been autodetected for JMX exposure
+2018-04-26 13:19:20,791  INFO AnnotationMBeanExporter:916 -Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-04-26 13:19:20,791  INFO AnnotationMBeanExporter:916 -Bean with name 'wallConfig' has been autodetected for JMX exposure
+2018-04-26 13:19:20,791  INFO AnnotationMBeanExporter:916 -Bean with name 'wallFilter' has been autodetected for JMX exposure
+2018-04-26 13:19:20,795  INFO AnnotationMBeanExporter:671 -Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=primaryDataSource,type=DruidDataSourceWrapper]
+2018-04-26 13:19:20,796  INFO AnnotationMBeanExporter:671 -Located MBean 'slaveDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=slaveDataSource,type=DruidDataSourceWrapper]
+2018-04-26 13:19:20,796  INFO AnnotationMBeanExporter:671 -Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
+2018-04-26 13:19:20,797  INFO AnnotationMBeanExporter:671 -Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
+2018-04-26 13:19:20,798  INFO AnnotationMBeanExporter:671 -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-04-26 13:19:20,875  INFO TomcatEmbeddedServletContainer:201 -Tomcat started on port(s): 8080 (http)
+2018-04-26 13:19:20,878  INFO BasicApplication:57 -Started BasicApplication in 10.808 seconds (JVM running for 13.939)
+2018-04-26 13:19:32,864  INFO DispatcherServlet:489 -FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-26 13:19:32,988  INFO DispatcherServlet:508 -FrameworkServlet 'dispatcherServlet': initialization completed in 123 ms
+2018-04-26 13:19:33,792  INFO UserInfoController:38 -查询的id:1
+2018-04-26 13:19:33,798  INFO DynamicDataSourceContextHolder:25 -切换到slave数据源
+2018-04-26 13:19:34,079  INFO DynamicDataSource:19 -数据源为slave
+2018-04-26 13:19:36,923  INFO DruidDataSource:785 -{dataSource-1} inited
+2018-04-26 13:21:47,391  INFO BasicApplication:48 -Starting BasicApplication on PC-20151125WOSC with PID 11036 (E:\idea\basic\target\classes started by Administrator in E:\idea\basic)
+2018-04-26 13:21:47,393  INFO BasicApplication:597 -The following profiles are active: local
+2018-04-26 13:21:47,529  INFO AnnotationConfigEmbeddedWebApplicationContext:583 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61fee5ab: startup date [Thu Apr 26 13:21:47 CST 2018]; root of context hierarchy
+2018-04-26 13:21:47,549  INFO Version:30 -HV000001: Hibernate Validator 5.3.6.Final
+2018-04-26 13:21:48,023  INFO RepositoryConfigurationDelegate:165 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-04-26 13:21:48,287  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fd18d9a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-26 13:21:48,646  INFO TomcatEmbeddedServletContainer:89 -Tomcat initialized with port(s): 8080 (http)
+2018-04-26 13:21:48,709  INFO ContextLoader:276 -Root WebApplicationContext: initialization completed in 1182 ms
+2018-04-26 13:21:48,875  INFO ServletRegistrationBean:190 -Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-26 13:21:48,876  INFO ServletRegistrationBean:190 -Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-04-26 13:21:48,878  INFO FilterRegistrationBean:258 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-26 13:21:48,879  INFO FilterRegistrationBean:258 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-26 13:21:48,879  INFO FilterRegistrationBean:258 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-26 13:21:48,879  INFO FilterRegistrationBean:258 -Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-26 13:21:48,879  INFO FilterRegistrationBean:271 -Mapping filter: 'webStatFilter' to urls: [/*]
+2018-04-26 13:21:49,830  INFO SessionFactoryConfig:42 -createSqlSessionFactoryBean method
+2018-04-26 13:21:50,392  INFO RequestMappingHandlerAdapter:534 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61fee5ab: startup date [Thu Apr 26 13:21:47 CST 2018]; root of context hierarchy
+2018-04-26 13:21:50,433  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectById],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectById(java.lang.Integer)
+2018-04-26 13:21:50,434  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectByUserName],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectByUserName(java.lang.String)
+2018-04-26 13:21:50,434  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/hello],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.hello()
+2018-04-26 13:21:50,435  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-26 13:21:50,436  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-26 13:21:50,462  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:21:50,462  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:21:50,489  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:21:50,762  INFO OptionalLiveReloadServer:58 -LiveReload server is running on port 35729
+2018-04-26 13:21:50,823  INFO AnnotationMBeanExporter:431 -Registering beans for JMX exposure on startup
+2018-04-26 13:21:50,824  INFO AnnotationMBeanExporter:916 -Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-04-26 13:21:50,824  INFO AnnotationMBeanExporter:916 -Bean with name 'slaveDataSource' has been autodetected for JMX exposure
+2018-04-26 13:21:50,824  INFO AnnotationMBeanExporter:916 -Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-04-26 13:21:50,824  INFO AnnotationMBeanExporter:916 -Bean with name 'wallConfig' has been autodetected for JMX exposure
+2018-04-26 13:21:50,824  INFO AnnotationMBeanExporter:916 -Bean with name 'wallFilter' has been autodetected for JMX exposure
+2018-04-26 13:21:50,827  INFO AnnotationMBeanExporter:671 -Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=primaryDataSource,type=DruidDataSourceWrapper]
+2018-04-26 13:21:50,829  INFO AnnotationMBeanExporter:671 -Located MBean 'slaveDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=slaveDataSource,type=DruidDataSourceWrapper]
+2018-04-26 13:21:50,829  INFO AnnotationMBeanExporter:671 -Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
+2018-04-26 13:21:50,830  INFO AnnotationMBeanExporter:671 -Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
+2018-04-26 13:21:50,831  INFO AnnotationMBeanExporter:671 -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-04-26 13:21:50,864  INFO TomcatEmbeddedServletContainer:201 -Tomcat started on port(s): 8080 (http)
+2018-04-26 13:21:50,868  INFO BasicApplication:57 -Started BasicApplication in 3.81 seconds (JVM running for 4.334)
+2018-04-26 13:25:23,678  INFO DispatcherServlet:489 -FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-26 13:25:23,694  INFO DispatcherServlet:508 -FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2018-04-26 13:25:23,743  INFO UserInfoController:38 -查询的id:1
+2018-04-26 13:25:23,744  INFO DynamicDataSourceContextHolder:25 -切换到slave数据源
+2018-04-26 13:25:23,756  INFO DynamicDataSource:19 -数据源为slave
+2018-04-26 13:25:26,092  INFO DruidDataSource:785 -{dataSource-1} inited
+2018-04-26 13:32:08,809  INFO BasicApplication:48 -Starting BasicApplication on PC-20151125WOSC with PID 9164 (E:\idea\basic\target\classes started by Administrator in E:\idea\basic)
+2018-04-26 13:32:08,811  INFO BasicApplication:597 -The following profiles are active: local
+2018-04-26 13:32:08,858  INFO AnnotationConfigEmbeddedWebApplicationContext:583 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c2cf532: startup date [Thu Apr 26 13:32:08 CST 2018]; root of context hierarchy
+2018-04-26 13:32:09,101  INFO Version:30 -HV000001: Hibernate Validator 5.3.6.Final
+2018-04-26 13:32:09,407  INFO RepositoryConfigurationDelegate:165 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-04-26 13:32:09,666  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4d26fee3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-26 13:32:10,033  INFO TomcatEmbeddedServletContainer:89 -Tomcat initialized with port(s): 8080 (http)
+2018-04-26 13:32:10,105  INFO ContextLoader:276 -Root WebApplicationContext: initialization completed in 1250 ms
+2018-04-26 13:32:10,273  INFO ServletRegistrationBean:190 -Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-26 13:32:10,275  INFO ServletRegistrationBean:190 -Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-04-26 13:32:10,277  INFO FilterRegistrationBean:258 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-26 13:32:10,278  INFO FilterRegistrationBean:258 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-26 13:32:10,278  INFO FilterRegistrationBean:258 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-26 13:32:10,278  INFO FilterRegistrationBean:258 -Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-26 13:32:10,278  INFO FilterRegistrationBean:271 -Mapping filter: 'webStatFilter' to urls: [/*]
+2018-04-26 13:32:11,177  INFO SessionFactoryConfig:42 -createSqlSessionFactoryBean method
+2018-04-26 13:32:11,710  INFO RequestMappingHandlerAdapter:534 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c2cf532: startup date [Thu Apr 26 13:32:08 CST 2018]; root of context hierarchy
+2018-04-26 13:32:11,750  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/hello],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.hello()
+2018-04-26 13:32:11,751  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectById],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectById(java.lang.Integer)
+2018-04-26 13:32:11,752  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectByUserName],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectByUserName(java.lang.String)
+2018-04-26 13:32:11,753  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-26 13:32:11,754  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-26 13:32:11,781  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:32:11,781  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:32:11,811  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:32:12,111  INFO OptionalLiveReloadServer:58 -LiveReload server is running on port 35729
+2018-04-26 13:32:12,177  INFO AnnotationMBeanExporter:431 -Registering beans for JMX exposure on startup
+2018-04-26 13:32:12,178  INFO AnnotationMBeanExporter:916 -Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-04-26 13:32:12,178  INFO AnnotationMBeanExporter:916 -Bean with name 'slaveDataSource' has been autodetected for JMX exposure
+2018-04-26 13:32:12,179  INFO AnnotationMBeanExporter:916 -Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-04-26 13:32:12,179  INFO AnnotationMBeanExporter:916 -Bean with name 'wallConfig' has been autodetected for JMX exposure
+2018-04-26 13:32:12,179  INFO AnnotationMBeanExporter:916 -Bean with name 'wallFilter' has been autodetected for JMX exposure
+2018-04-26 13:32:12,183  INFO AnnotationMBeanExporter:671 -Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=primaryDataSource,type=DruidDataSourceWrapper]
+2018-04-26 13:32:12,184  INFO AnnotationMBeanExporter:671 -Located MBean 'slaveDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=slaveDataSource,type=DruidDataSourceWrapper]
+2018-04-26 13:32:12,185  INFO AnnotationMBeanExporter:671 -Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
+2018-04-26 13:32:12,186  INFO AnnotationMBeanExporter:671 -Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
+2018-04-26 13:32:12,187  INFO AnnotationMBeanExporter:671 -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-04-26 13:32:12,221  INFO TomcatEmbeddedServletContainer:201 -Tomcat started on port(s): 8080 (http)
+2018-04-26 13:32:12,224  INFO BasicApplication:57 -Started BasicApplication in 3.572 seconds (JVM running for 4.12)
+2018-04-26 13:33:48,326  INFO BasicApplication:48 -Starting BasicApplication on PC-20151125WOSC with PID 280 (E:\idea\basic\target\classes started by Administrator in E:\idea\basic)
+2018-04-26 13:33:48,328  INFO BasicApplication:597 -The following profiles are active: local
+2018-04-26 13:33:48,364  INFO AnnotationConfigEmbeddedWebApplicationContext:583 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72664e38: startup date [Thu Apr 26 13:33:48 CST 2018]; root of context hierarchy
+2018-04-26 13:33:48,596  INFO Version:30 -HV000001: Hibernate Validator 5.3.6.Final
+2018-04-26 13:33:48,994  INFO RepositoryConfigurationDelegate:165 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-04-26 13:33:49,248  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6c56f098] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-26 13:33:49,601  INFO TomcatEmbeddedServletContainer:89 -Tomcat initialized with port(s): 8080 (http)
+2018-04-26 13:33:49,659  INFO ContextLoader:276 -Root WebApplicationContext: initialization completed in 1297 ms
+2018-04-26 13:33:49,818  INFO ServletRegistrationBean:190 -Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-26 13:33:49,818  INFO ServletRegistrationBean:190 -Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-04-26 13:33:49,820  INFO FilterRegistrationBean:258 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-26 13:33:49,821  INFO FilterRegistrationBean:258 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-26 13:33:49,821  INFO FilterRegistrationBean:258 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-26 13:33:49,821  INFO FilterRegistrationBean:258 -Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-26 13:33:49,821  INFO FilterRegistrationBean:271 -Mapping filter: 'webStatFilter' to urls: [/*]
+2018-04-26 13:33:50,516  WARN AnnotationConfigEmbeddedWebApplicationContext:551 -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userInfoController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userInfoServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userInfoMapper' defined in file [E:\idea\basic\target\classes\com\xh\basic\dao\UserInfoMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sessionFactoryConfig': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dynamicDataSource' defined in class path resource [com/xh/basic/datasource/config/DruidConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'primaryDataSource' defined in class path resource [com/xh/basic/datasource/config/DruidConfig.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceInitializer': Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'dynamicDataSource': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2018-04-26 13:33:50,564  INFO AutoConfigurationReportLoggingInitializer:101 -
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-04-26 13:33:50,568 ERROR LoggingFailureAnalysisReporter:42 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   userInfoController
+      ↓
+   userInfoServiceImpl
+      ↓
+   userInfoMapper defined in file [E:\idea\basic\target\classes\com\xh\basic\dao\UserInfoMapper.class]
+      ↓
+   sessionFactoryConfig (field private javax.sql.DataSource com.xh.basic.datasource.config.SessionFactoryConfig.dataSource)
+┌─────┐
+|  dynamicDataSource defined in class path resource [com/xh/basic/datasource/config/DruidConfig.class]
+↑     ↓
+|  primaryDataSource defined in class path resource [com/xh/basic/datasource/config/DruidConfig.class]
+↑     ↓
+|  dataSourceInitializer
+└─────┘
+
+
+2018-04-26 13:35:19,723  INFO Version:30 -HV000001: Hibernate Validator 5.3.6.Final
+2018-04-26 13:35:19,737  INFO BasicApplication:48 -Starting BasicApplication on PC-20151125WOSC with PID 9024 (E:\idea\basic\target\classes started by Administrator in E:\idea\basic)
+2018-04-26 13:35:19,738  INFO BasicApplication:597 -The following profiles are active: local
+2018-04-26 13:35:19,771  INFO AnnotationConfigEmbeddedWebApplicationContext:583 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@24d79d8f: startup date [Thu Apr 26 13:35:19 CST 2018]; root of context hierarchy
+2018-04-26 13:35:20,232  INFO RepositoryConfigurationDelegate:165 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-04-26 13:35:20,499  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ce4cc007] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-26 13:35:20,894  INFO TomcatEmbeddedServletContainer:89 -Tomcat initialized with port(s): 8080 (http)
+2018-04-26 13:35:20,958  INFO ContextLoader:276 -Root WebApplicationContext: initialization completed in 1190 ms
+2018-04-26 13:35:21,123  INFO ServletRegistrationBean:190 -Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-26 13:35:21,125  INFO ServletRegistrationBean:190 -Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-04-26 13:35:21,128  INFO FilterRegistrationBean:258 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-26 13:35:21,128  INFO FilterRegistrationBean:258 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-26 13:35:21,128  INFO FilterRegistrationBean:258 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-26 13:35:21,128  INFO FilterRegistrationBean:258 -Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-26 13:35:21,129  INFO FilterRegistrationBean:271 -Mapping filter: 'webStatFilter' to urls: [/*]
+2018-04-26 13:35:22,237  INFO SessionFactoryConfig:42 -createSqlSessionFactoryBean method
+2018-04-26 13:35:22,844  INFO RequestMappingHandlerAdapter:534 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@24d79d8f: startup date [Thu Apr 26 13:35:19 CST 2018]; root of context hierarchy
+2018-04-26 13:35:22,885  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/hello],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.hello()
+2018-04-26 13:35:22,887  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectByUserName],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectByUserName(java.lang.String)
+2018-04-26 13:35:22,888  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectById],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectById(java.lang.Integer)
+2018-04-26 13:35:22,890  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-26 13:35:22,891  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-26 13:35:22,919  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:35:22,920  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:35:22,951  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:35:23,293  INFO OptionalLiveReloadServer:58 -LiveReload server is running on port 35729
+2018-04-26 13:35:23,365  INFO AnnotationMBeanExporter:431 -Registering beans for JMX exposure on startup
+2018-04-26 13:35:23,365  INFO AnnotationMBeanExporter:916 -Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-04-26 13:35:23,366  INFO AnnotationMBeanExporter:916 -Bean with name 'slaveDataSource' has been autodetected for JMX exposure
+2018-04-26 13:35:23,366  INFO AnnotationMBeanExporter:916 -Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-04-26 13:35:23,366  INFO AnnotationMBeanExporter:916 -Bean with name 'wallConfig' has been autodetected for JMX exposure
+2018-04-26 13:35:23,366  INFO AnnotationMBeanExporter:916 -Bean with name 'wallFilter' has been autodetected for JMX exposure
+2018-04-26 13:35:23,369  INFO AnnotationMBeanExporter:671 -Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=primaryDataSource,type=DruidDataSourceWrapper]
+2018-04-26 13:35:23,371  INFO AnnotationMBeanExporter:671 -Located MBean 'slaveDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=slaveDataSource,type=DruidDataSourceWrapper]
+2018-04-26 13:35:23,371  INFO AnnotationMBeanExporter:671 -Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
+2018-04-26 13:35:23,372  INFO AnnotationMBeanExporter:671 -Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
+2018-04-26 13:35:23,373  INFO AnnotationMBeanExporter:671 -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-04-26 13:35:23,404  INFO TomcatEmbeddedServletContainer:201 -Tomcat started on port(s): 8080 (http)
+2018-04-26 13:35:23,408  INFO BasicApplication:57 -Started BasicApplication in 3.998 seconds (JVM running for 4.556)
+2018-04-26 13:41:44,980  INFO BasicApplication:48 -Starting BasicApplication on PC-20151125WOSC with PID 10508 (E:\idea\basic\target\classes started by Administrator in E:\idea\basic)
+2018-04-26 13:41:44,981  INFO BasicApplication:597 -The following profiles are active: local
+2018-04-26 13:41:45,030  INFO AnnotationConfigEmbeddedWebApplicationContext:583 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61ac25db: startup date [Thu Apr 26 13:41:45 CST 2018]; root of context hierarchy
+2018-04-26 13:41:45,103  INFO Version:30 -HV000001: Hibernate Validator 5.3.6.Final
+2018-04-26 13:41:45,524  INFO RepositoryConfigurationDelegate:165 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-04-26 13:41:45,770  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ac029ed2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-26 13:41:46,153  INFO TomcatEmbeddedServletContainer:89 -Tomcat initialized with port(s): 8080 (http)
+2018-04-26 13:41:46,221  INFO ContextLoader:276 -Root WebApplicationContext: initialization completed in 1194 ms
+2018-04-26 13:41:46,371  INFO ServletRegistrationBean:190 -Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-26 13:41:46,372  INFO ServletRegistrationBean:190 -Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-04-26 13:41:46,374  INFO FilterRegistrationBean:258 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-26 13:41:46,374  INFO FilterRegistrationBean:258 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-26 13:41:46,375  INFO FilterRegistrationBean:258 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-26 13:41:46,375  INFO FilterRegistrationBean:258 -Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-26 13:41:46,375  INFO FilterRegistrationBean:271 -Mapping filter: 'webStatFilter' to urls: [/*]
+2018-04-26 13:41:47,237  INFO SessionFactoryConfig:42 -createSqlSessionFactoryBean method
+2018-04-26 13:41:47,778  INFO RequestMappingHandlerAdapter:534 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61ac25db: startup date [Thu Apr 26 13:41:45 CST 2018]; root of context hierarchy
+2018-04-26 13:41:47,816  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/hello],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.hello()
+2018-04-26 13:41:47,817  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectById],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectById(java.lang.Integer)
+2018-04-26 13:41:47,818  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectByUserName],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectByUserName(java.lang.String)
+2018-04-26 13:41:47,820  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-26 13:41:47,820  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-26 13:41:47,846  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:41:47,847  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:41:47,873  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 13:41:48,156  INFO OptionalLiveReloadServer:58 -LiveReload server is running on port 35729
+2018-04-26 13:41:48,211  INFO AnnotationMBeanExporter:431 -Registering beans for JMX exposure on startup
+2018-04-26 13:41:48,212  INFO AnnotationMBeanExporter:916 -Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-04-26 13:41:48,212  INFO AnnotationMBeanExporter:916 -Bean with name 'slaveDataSource' has been autodetected for JMX exposure
+2018-04-26 13:41:48,212  INFO AnnotationMBeanExporter:916 -Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-04-26 13:41:48,213  INFO AnnotationMBeanExporter:916 -Bean with name 'wallConfig' has been autodetected for JMX exposure
+2018-04-26 13:41:48,213  INFO AnnotationMBeanExporter:916 -Bean with name 'wallFilter' has been autodetected for JMX exposure
+2018-04-26 13:41:48,216  INFO AnnotationMBeanExporter:671 -Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=primaryDataSource,type=DruidDataSourceWrapper]
+2018-04-26 13:41:48,218  INFO AnnotationMBeanExporter:671 -Located MBean 'slaveDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=slaveDataSource,type=DruidDataSourceWrapper]
+2018-04-26 13:41:48,218  INFO AnnotationMBeanExporter:671 -Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
+2018-04-26 13:41:48,219  INFO AnnotationMBeanExporter:671 -Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
+2018-04-26 13:41:48,220  INFO AnnotationMBeanExporter:671 -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-04-26 13:41:48,253  INFO TomcatEmbeddedServletContainer:201 -Tomcat started on port(s): 8080 (http)
+2018-04-26 13:41:48,257  INFO BasicApplication:57 -Started BasicApplication in 3.489 seconds (JVM running for 4.054)
+2018-04-26 13:41:52,268  INFO DispatcherServlet:489 -FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-26 13:41:52,283  INFO DispatcherServlet:508 -FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+2018-04-26 13:41:52,327  INFO UserInfoController:38 -查询的id:1
+2018-04-26 13:41:52,329  INFO DynamicDataSourceContextHolder:25 -切换到slave数据源
+2018-04-26 13:41:52,340  INFO DynamicDataSource:19 -数据源为slave
+2018-04-26 13:41:54,749  INFO DruidDataSource:785 -{dataSource-1} inited
+2018-04-26 16:55:52,975  INFO BasicApplication:48 -Starting BasicApplication on PC-20151125WOSC with PID 3832 (E:\idea\basic\target\classes started by Administrator in E:\idea\basic)
+2018-04-26 16:55:53,065  INFO BasicApplication:597 -The following profiles are active: local
+2018-04-26 16:55:53,727  INFO AnnotationConfigEmbeddedWebApplicationContext:583 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4f657996: startup date [Thu Apr 26 16:55:53 CST 2018]; root of context hierarchy
+2018-04-26 16:55:54,334  INFO Version:30 -HV000001: Hibernate Validator 5.3.6.Final
+2018-04-26 16:55:56,486  INFO RepositoryConfigurationDelegate:165 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-04-26 16:55:57,340  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f8fc66eb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-26 16:55:58,256  INFO TomcatEmbeddedServletContainer:89 -Tomcat initialized with port(s): 8080 (http)
+2018-04-26 16:55:58,394  INFO ContextLoader:276 -Root WebApplicationContext: initialization completed in 4735 ms
+2018-04-26 16:55:58,668  INFO ServletRegistrationBean:190 -Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-26 16:55:58,668  INFO ServletRegistrationBean:190 -Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-04-26 16:55:58,670  INFO FilterRegistrationBean:258 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-26 16:55:58,671  INFO FilterRegistrationBean:258 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-26 16:55:58,671  INFO FilterRegistrationBean:258 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-26 16:55:58,671  INFO FilterRegistrationBean:258 -Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-26 16:55:58,671  INFO FilterRegistrationBean:271 -Mapping filter: 'webStatFilter' to urls: [/*]
+2018-04-26 16:56:00,016  INFO SessionFactoryConfig:42 -createSqlSessionFactoryBean method
+2018-04-26 16:56:02,322  INFO RequestMappingHandlerAdapter:534 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4f657996: startup date [Thu Apr 26 16:55:53 CST 2018]; root of context hierarchy
+2018-04-26 16:56:02,372  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectByUserName],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectByUserName(java.lang.String)
+2018-04-26 16:56:02,373  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/hello],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.hello()
+2018-04-26 16:56:02,373  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectById],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectById(java.lang.Integer)
+2018-04-26 16:56:02,375  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-26 16:56:02,375  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-26 16:56:02,418  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 16:56:02,418  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 16:56:02,454  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 16:56:02,916  INFO OptionalLiveReloadServer:58 -LiveReload server is running on port 35729
+2018-04-26 16:56:02,969  INFO AnnotationMBeanExporter:431 -Registering beans for JMX exposure on startup
+2018-04-26 16:56:02,970  INFO AnnotationMBeanExporter:916 -Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-04-26 16:56:02,970  INFO AnnotationMBeanExporter:916 -Bean with name 'slaveDataSource' has been autodetected for JMX exposure
+2018-04-26 16:56:02,971  INFO AnnotationMBeanExporter:916 -Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-04-26 16:56:02,971  INFO AnnotationMBeanExporter:916 -Bean with name 'wallConfig' has been autodetected for JMX exposure
+2018-04-26 16:56:02,971  INFO AnnotationMBeanExporter:916 -Bean with name 'wallFilter' has been autodetected for JMX exposure
+2018-04-26 16:56:02,975  INFO AnnotationMBeanExporter:671 -Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=primaryDataSource,type=DruidDataSourceWrapper]
+2018-04-26 16:56:02,992  INFO AnnotationMBeanExporter:671 -Located MBean 'slaveDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=slaveDataSource,type=DruidDataSourceWrapper]
+2018-04-26 16:56:02,993  INFO AnnotationMBeanExporter:671 -Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
+2018-04-26 16:56:02,994  INFO AnnotationMBeanExporter:671 -Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
+2018-04-26 16:56:02,995  INFO AnnotationMBeanExporter:671 -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-04-26 16:56:03,081  INFO TomcatEmbeddedServletContainer:201 -Tomcat started on port(s): 8080 (http)
+2018-04-26 16:56:03,085  INFO BasicApplication:57 -Started BasicApplication in 12.316 seconds (JVM running for 17.472)
+2018-04-26 16:58:50,451  INFO DispatcherServlet:489 -FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-26 16:58:50,755  INFO DispatcherServlet:508 -FrameworkServlet 'dispatcherServlet': initialization completed in 304 ms
+2018-04-26 16:58:51,501  INFO UserInfoController:38 -查询的id:1
+2018-04-26 16:58:51,505  INFO DynamicDataSourceContextHolder:25 -切换到slave数据源
+2018-04-26 16:58:51,639  INFO DynamicDataSource:19 -数据源为slave
+2018-04-26 16:58:54,437  INFO DruidDataSource:785 -{dataSource-1} inited
+2018-04-26 16:58:54,670  INFO DynamicDataSource:19 -数据源为slave
+2018-04-26 16:58:54,709  INFO DynamicDataSource:19 -数据源为slave
+2018-04-26 17:04:45,379  INFO AnnotationConfigEmbeddedWebApplicationContext:984 -Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4f657996: startup date [Thu Apr 26 16:55:53 CST 2018]; root of context hierarchy
+2018-04-26 17:04:45,382  INFO AnnotationMBeanExporter:449 -Unregistering JMX-exposed beans on shutdown
+2018-04-26 17:04:45,383  INFO AnnotationMBeanExporter:241 -Unregistering JMX-exposed beans
+2018-04-26 17:04:45,401  INFO DruidDataSource:1534 -{dataSource-1} closed
+2018-04-26 17:04:45,756  INFO BasicApplication:48 -Starting BasicApplication on PC-20151125WOSC with PID 3832 (E:\idea\basic\target\classes started by Administrator in E:\idea\basic)
+2018-04-26 17:04:45,756  INFO BasicApplication:597 -The following profiles are active: local
+2018-04-26 17:04:45,758  INFO AnnotationConfigEmbeddedWebApplicationContext:583 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@10126db4: startup date [Thu Apr 26 17:04:45 CST 2018]; root of context hierarchy
+2018-04-26 17:04:45,901  INFO RepositoryConfigurationDelegate:165 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-04-26 17:04:45,945  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f8fc66eb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-26 17:04:46,027  INFO TomcatEmbeddedServletContainer:89 -Tomcat initialized with port(s): 8080 (http)
+2018-04-26 17:04:46,039  INFO ContextLoader:276 -Root WebApplicationContext: initialization completed in 281 ms
+2018-04-26 17:04:46,086  INFO ServletRegistrationBean:190 -Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-26 17:04:46,086  INFO ServletRegistrationBean:190 -Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-04-26 17:04:46,087  INFO FilterRegistrationBean:258 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-26 17:04:46,087  INFO FilterRegistrationBean:258 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-26 17:04:46,087  INFO FilterRegistrationBean:258 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-26 17:04:46,087  INFO FilterRegistrationBean:258 -Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-26 17:04:46,087  INFO FilterRegistrationBean:271 -Mapping filter: 'webStatFilter' to urls: [/*]
+2018-04-26 17:04:46,815  INFO SessionFactoryConfig:42 -createSqlSessionFactoryBean method
+2018-04-26 17:04:46,950  INFO RequestMappingHandlerAdapter:534 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@10126db4: startup date [Thu Apr 26 17:04:45 CST 2018]; root of context hierarchy
+2018-04-26 17:04:46,960  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectByUserName],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectByUserName(java.lang.String)
+2018-04-26 17:04:46,960  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/hello],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.hello()
+2018-04-26 17:04:46,961  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectById],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectById(java.lang.Integer)
+2018-04-26 17:04:46,962  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-26 17:04:46,962  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-26 17:04:46,975  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 17:04:46,975  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 17:04:46,988  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 17:04:47,089  INFO OptionalLiveReloadServer:58 -LiveReload server is running on port 35729
+2018-04-26 17:04:47,132  INFO AnnotationMBeanExporter:431 -Registering beans for JMX exposure on startup
+2018-04-26 17:04:47,133  INFO AnnotationMBeanExporter:916 -Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-04-26 17:04:47,133  INFO AnnotationMBeanExporter:916 -Bean with name 'slaveDataSource' has been autodetected for JMX exposure
+2018-04-26 17:04:47,133  INFO AnnotationMBeanExporter:916 -Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-04-26 17:04:47,133  INFO AnnotationMBeanExporter:916 -Bean with name 'wallConfig' has been autodetected for JMX exposure
+2018-04-26 17:04:47,133  INFO AnnotationMBeanExporter:916 -Bean with name 'wallFilter' has been autodetected for JMX exposure
+2018-04-26 17:04:47,135  INFO AnnotationMBeanExporter:671 -Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=primaryDataSource,type=DruidDataSourceWrapper]
+2018-04-26 17:04:47,137  INFO AnnotationMBeanExporter:671 -Located MBean 'slaveDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=slaveDataSource,type=DruidDataSourceWrapper]
+2018-04-26 17:04:47,137  INFO AnnotationMBeanExporter:671 -Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
+2018-04-26 17:04:47,138  INFO AnnotationMBeanExporter:671 -Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
+2018-04-26 17:04:47,138  INFO AnnotationMBeanExporter:671 -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-04-26 17:04:47,144  INFO TomcatEmbeddedServletContainer:201 -Tomcat started on port(s): 8080 (http)
+2018-04-26 17:04:47,146  INFO BasicApplication:57 -Started BasicApplication in 1.422 seconds (JVM running for 541.525)
+2018-04-26 17:05:15,329  INFO BasicApplication:48 -Starting BasicApplication on PC-20151125WOSC with PID 1260 (E:\idea\basic\target\classes started by Administrator in E:\idea\basic)
+2018-04-26 17:05:15,330  INFO BasicApplication:597 -The following profiles are active: local
+2018-04-26 17:05:15,450  INFO AnnotationConfigEmbeddedWebApplicationContext:583 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41f8f365: startup date [Thu Apr 26 17:05:15 CST 2018]; root of context hierarchy
+2018-04-26 17:05:15,494  INFO Version:30 -HV000001: Hibernate Validator 5.3.6.Final
+2018-04-26 17:05:16,002  INFO RepositoryConfigurationDelegate:165 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-04-26 17:05:16,256  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b110e6d4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-04-26 17:05:16,616  INFO TomcatEmbeddedServletContainer:89 -Tomcat initialized with port(s): 8080 (http)
+2018-04-26 17:05:16,675  INFO ContextLoader:276 -Root WebApplicationContext: initialization completed in 1227 ms
+2018-04-26 17:05:16,821  INFO ServletRegistrationBean:190 -Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-26 17:05:16,822  INFO ServletRegistrationBean:190 -Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-04-26 17:05:16,825  INFO FilterRegistrationBean:258 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-26 17:05:16,825  INFO FilterRegistrationBean:258 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-26 17:05:16,825  INFO FilterRegistrationBean:258 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-26 17:05:16,825  INFO FilterRegistrationBean:258 -Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-26 17:05:16,826  INFO FilterRegistrationBean:271 -Mapping filter: 'webStatFilter' to urls: [/*]
+2018-04-26 17:05:17,684  INFO SessionFactoryConfig:42 -createSqlSessionFactoryBean method
+2018-04-26 17:05:18,210  INFO RequestMappingHandlerAdapter:534 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@41f8f365: startup date [Thu Apr 26 17:05:15 CST 2018]; root of context hierarchy
+2018-04-26 17:05:18,247  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectById],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectById(java.lang.Integer)
+2018-04-26 17:05:18,248  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/hello],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.hello()
+2018-04-26 17:05:18,248  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectByUserName],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectByUserName(java.lang.String)
+2018-04-26 17:05:18,250  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-04-26 17:05:18,250  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-04-26 17:05:18,276  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 17:05:18,276  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 17:05:18,302  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-26 17:05:18,597  INFO OptionalLiveReloadServer:58 -LiveReload server is running on port 35729
+2018-04-26 17:05:18,652  INFO AnnotationMBeanExporter:431 -Registering beans for JMX exposure on startup
+2018-04-26 17:05:18,653  INFO AnnotationMBeanExporter:916 -Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-04-26 17:05:18,653  INFO AnnotationMBeanExporter:916 -Bean with name 'slaveDataSource' has been autodetected for JMX exposure
+2018-04-26 17:05:18,654  INFO AnnotationMBeanExporter:916 -Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-04-26 17:05:18,654  INFO AnnotationMBeanExporter:916 -Bean with name 'wallConfig' has been autodetected for JMX exposure
+2018-04-26 17:05:18,654  INFO AnnotationMBeanExporter:916 -Bean with name 'wallFilter' has been autodetected for JMX exposure
+2018-04-26 17:05:18,658  INFO AnnotationMBeanExporter:671 -Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=primaryDataSource,type=DruidDataSourceWrapper]
+2018-04-26 17:05:18,659  INFO AnnotationMBeanExporter:671 -Located MBean 'slaveDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=slaveDataSource,type=DruidDataSourceWrapper]
+2018-04-26 17:05:18,660  INFO AnnotationMBeanExporter:671 -Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
+2018-04-26 17:05:18,661  INFO AnnotationMBeanExporter:671 -Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
+2018-04-26 17:05:18,661  INFO AnnotationMBeanExporter:671 -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-04-26 17:05:18,696  INFO TomcatEmbeddedServletContainer:201 -Tomcat started on port(s): 8080 (http)
+2018-04-26 17:05:18,699  INFO BasicApplication:57 -Started BasicApplication in 3.506 seconds (JVM running for 4.162)
+2018-04-26 17:05:22,743  INFO DispatcherServlet:489 -FrameworkServlet 'dispatcherServlet': initialization started
+2018-04-26 17:05:22,758  INFO DispatcherServlet:508 -FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+2018-04-26 17:05:22,803  INFO UserInfoController:38 -查询的id:1
+2018-04-26 17:05:22,804  INFO DynamicDataSourceContextHolder:25 -切换到slave数据源
+2018-04-26 17:05:22,894  INFO DynamicDataSource:19 -数据源为slave
+2018-04-26 17:05:25,421  INFO DruidDataSource:785 -{dataSource-1} inited
