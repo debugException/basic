@@ -1,5 +1,6 @@
 package com.xh.basic.controller;
 
+import com.xh.basic.bean.Resp;
 import com.xh.basic.bean.ResponseBean;
 import com.xh.basic.redis.annotation.MCache;
 import com.xh.basic.redis.service.RedisService;
@@ -7,6 +8,7 @@ import com.xh.basic.service.UserInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -46,5 +48,11 @@ public class UserInfoController {
         ResponseBean responseBean =  new ResponseBean();
         responseBean = responseBean.rtnSuccess(userInfoService.selectByUserName(userName));
         return responseBean;
+    }
+
+    @GetMapping("/jsonRst")
+    public Resp getJsonRst(){
+        Resp resp = new Resp("0","返回json格式数据");
+        return resp;
     }
 }
