@@ -35,7 +35,7 @@
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
 
         <!--生成对应表及类名 -->
-        <table tableName="%" enableCountByExample="false" enableUpdateByExample="false"  enableDeleteByExample="false"
+        <table tableName="*" enableCountByExample="false" enableUpdateByExample="false"  enableDeleteByExample="false"
                 enableSelectByExample="false" selectByExampleQueryId="false">
             <!-- Mybaits Generator 自动生成实体类和数据库中字段名是否一致 -->
             <property name="useActualColumnNames" value="false" />

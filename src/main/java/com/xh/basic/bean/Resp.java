@@ -140,6 +140,10 @@ public class Resp<T> implements Serializable {
         return new Resp<T>(SUCCESS_CODE, "请求成功", null);
     }
 
+    public static <T>Resp success(String message){
+        return new Resp<T>(SUCCESS_CODE, message);
+    }
+
     public static <T>Resp success(T result){
         return new Resp<T>(SUCCESS_CODE, "请求成功", result);
     }
