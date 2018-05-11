@@ -136,47 +136,47 @@ public class Resp<T> implements Serializable {
     }
 
     //快速返回成功
-    public static <T>Resp success(){
+    public <T>Resp success(){
         return new Resp<T>(SUCCESS_CODE, "请求成功", null);
     }
 
-    public static <T>Resp success(String message){
+    public <T>Resp success(String message){
         return new Resp<T>(SUCCESS_CODE, message);
     }
 
-    public static <T>Resp success(T result){
+    public <T>Resp success(T result){
         return new Resp<T>(SUCCESS_CODE, "请求成功", result);
     }
 
-    public static <T>Resp success(String message, T result){
+    public <T>Resp success(String message, T result){
         return new Resp<T>(SUCCESS_CODE, message, result);
     }
 
-    public static <T>Resp success(String message, T result, Map<String, Object> extra){
+    public <T>Resp success(String message, T result, Map<String, Object> extra){
         return new Resp<T>(SUCCESS_CODE, message, result, extra);
     }
 
-    public static <T>Resp success(T result, Long total, Integer pageNo, Integer pageSize){
+    public <T>Resp success(T result, Long total, Integer pageNo, Integer pageSize){
         PageInfo pageInfo = new PageInfo(total, pageNo, pageSize);
         return new Resp<T>(SUCCESS_CODE, "请求成功", result, pageInfo);
     }
 
-    public static <T>Resp success(String message, T result, Long total, Integer pageNo, Integer pageSize){
+    public <T>Resp success(String message, T result, Long total, Integer pageNo, Integer pageSize){
         PageInfo pageInfo = new PageInfo(total, pageNo, pageSize);
         return new Resp<T>(SUCCESS_CODE, message, result, pageInfo);
     }
 
-    public static <T>Resp success(String message, T result, Map<String, Object> extra, Long total, Integer pageNo, Integer pageSize){
+    public <T>Resp success(String message, T result, Map<String, Object> extra, Long total, Integer pageNo, Integer pageSize){
         PageInfo pageInfo = new PageInfo(total, pageNo, pageSize);
         return new Resp<T>(SUCCESS_CODE, message, result, extra, pageInfo);
     }
 
     //快速返回失败状态
-    public static <T>Resp fail(){
+    public <T>Resp fail(){
         return new Resp<T>(ErrorCode.SYSTEM_ERROR.getCode(),ErrorCode.SYSTEM_ERROR.getMessage());
     }
 
-    public static <T>Resp fail(T result){
+    public <T>Resp fail(T result){
         return new Resp<T>(ErrorCode.SYSTEM_ERROR.getCode(),ErrorCode.SYSTEM_ERROR.getMessage(),result);
     }
 
@@ -188,41 +188,41 @@ public class Resp<T> implements Serializable {
         return new Resp<T>(ErrorCode.SYSTEM_ERROR.getCode(),message,result, extra);
     }
 
-    public static <T>Resp fail(ErrorCode errorCode){
+    public <T>Resp fail(ErrorCode errorCode){
         return new Resp<T>(errorCode.getCode(),errorCode.getMessage());
     }
 
-    public static <T>Resp fail(ErrorCode errorCode, T result){
+    public <T>Resp fail(ErrorCode errorCode, T result){
         return new Resp<T>(errorCode.getCode(),errorCode.getMessage(),result);
     }
 
-    public static <T>Resp fail(ErrorCode errorCode, String message, T result){
+    public <T>Resp fail(ErrorCode errorCode, String message, T result){
         return new Resp<T>(errorCode.getCode(),message,result);
     }
 
-    public static <T>Resp fail(ErrorCode errorCode, String message, T result, Map<String, Object> extra){
+    public <T>Resp fail(ErrorCode errorCode, String message, T result, Map<String, Object> extra){
         return new Resp<T>(errorCode.getCode(),message,result, extra);
     }
 
     //快速返回自定义状态码
-    public static <T>Resp result(String statusCode, String message){
+    public <T>Resp result(String statusCode, String message){
         return new Resp<T>(statusCode,message);
     }
 
-    public static <T>Resp result(String statusCode, String message, T result){
+    public <T>Resp result(String statusCode, String message, T result){
         return new Resp<T>(statusCode,message,result);
     }
 
-    public static <T>Resp result(String statusCode, String message, T result, Map<String, Object> extra){
+    public <T>Resp result(String statusCode, String message, T result, Map<String, Object> extra){
         return new Resp<T>(statusCode,message,result, extra);
     }
 
-    public static <T>Resp result(String statusCode, String message, T result, Long total, Integer pageNo, Integer pageSize){
+    public <T>Resp result(String statusCode, String message, T result, Long total, Integer pageNo, Integer pageSize){
         PageInfo pageInfo = new PageInfo(total, pageNo, pageSize);
         return new Resp<T>(statusCode,message,result, pageInfo);
     }
 
-    public static <T>Resp result(String statusCode, String message, T result, Map<String, Object> extra, Long total, Integer pageNo, Integer pageSize){
+    public <T>Resp result(String statusCode, String message, T result, Map<String, Object> extra, Long total, Integer pageNo, Integer pageSize){
         PageInfo pageInfo = new PageInfo(total, pageNo, pageSize);
         return new Resp<T>(statusCode,message,result, extra,pageInfo);
     }

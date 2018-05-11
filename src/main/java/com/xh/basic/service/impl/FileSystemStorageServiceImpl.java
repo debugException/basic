@@ -23,7 +23,7 @@ import java.util.stream.Stream;
  * @date 2018/4/2713:42
  */
 @Service
-public class FileSystemStorageService implements StorageService {
+public class FileSystemStorageServiceImpl implements StorageService {
 
     private final Path rootLocation = Paths.get("upload-dir");
 

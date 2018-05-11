@@ -2,13 +2,11 @@ package com.xh.basic.controller;
 
 import com.xh.basic.bean.Resp;
 import com.xh.basic.dao.UserMapper;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.subject.Subject;
+import com.xh.basic.utils.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.io.UnsupportedEncodingException;
 
 /**
  * @author szq
@@ -26,40 +24,22 @@ public class LoginController {
         this.userMapper = userMapper;
     }
 
-    @RequestMapping(value = "/notLogin", method = RequestMethod.GET)
-    public Resp notLogin(){
-        return new Resp().success("您尚未登陆！");
-    }
-
-    @RequestMapping(value = "/notRole", method = RequestMethod.GET)
-    public Resp notRole(){
-        return new Resp().success("您没有权限！");
-    }
-
-    @RequestMapping(value = "/logout", method = RequestMethod.GET)
-    public Resp logout(){
-        Subject subject = SecurityUtils.getSubject();
-        //注销
-        subject.logout();
-        return new Resp().success("成功注销！");
-    }
-
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public Resp login(String username, String password){
-        //从SecurityUtils里边创建一个subject
-        Subject subject = SecurityUtils.getSubject();
-        //在认证提交前准备token令牌
-        UsernamePasswordToken token = new UsernamePasswordToken(username, password);
-        //执行认证登陆
-        subject.login(token);
-        //根据权限指定返回数据
-        String role = userMapper.getRole(username);
-        if ("user".equals(role)){
-            return new Resp().success("欢迎登陆");
+    @PostMapping("/login")
+    public Resp login(@RequestParam(value = "username", required = false) String username,
+                      @RequestParam(value = "password", required = false) String password){
+        String realPassword = userMapper.getPassword(username);
+        if(realPassword == null){
+            return new Resp("401","用户名错误");
+        }else if(!realPassword.equals(password)){
+            return new Resp("401", "密码错误");
+        }else{
+            return new Resp().success(JWTUtil.createToken(username));
         }
-        if ("admin".equals(role)){
-            return new Resp().success("欢迎来到管理员页面");
-        }
-        return new Resp().success("权限错误");
     }
+
+    @RequestMapping(path = "/unauthorized/{message}")
+    public Resp unauthorized(@PathVariable String message) throws UnsupportedEncodingException{
+        return new Resp("401", message);
+    }
+
 }

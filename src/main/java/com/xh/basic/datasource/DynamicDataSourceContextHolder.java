@@ -18,17 +18,17 @@ public class DynamicDataSourceContextHolder {
      */
     public static final String DEFAULT_DATASOURCE = "primary";
 
-    private static final ThreadLocal<String> contextHolder = new ThreadLocal<>();
+    private static final ThreadLocal<String>  CONTEXT_HOLDER = new ThreadLocal<>();
 
     //设置数据源名
     public static void setDataSource(String dbType){
         log.info("切换到{}数据源", dbType);
-        contextHolder.set(dbType);
+        CONTEXT_HOLDER.set(dbType);
     }
 
     //获取数据源名
     public static String getDataSource(){
-        String dataSource = contextHolder.get();
+        String dataSource = CONTEXT_HOLDER.get();
         if (dataSource!=null && dataSource.length()>0){
             return dataSource;
         }else{
@@ -38,6 +38,6 @@ public class DynamicDataSourceContextHolder {
 
     //清楚数据源名
     public static void clearDataSource(){
-        contextHolder.remove();
+        CONTEXT_HOLDER.remove();
     }
 }

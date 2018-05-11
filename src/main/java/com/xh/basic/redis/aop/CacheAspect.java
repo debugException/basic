@@ -1,8 +1,8 @@
 package com.xh.basic.redis.aop;
 
 import com.xh.basic.redis.annotation.MCache;
-import com.xh.basic.redis.service.RedisService;
 import com.xh.basic.redis.service.impl.RedisServiceImpl;
+import com.xh.basic.redis.util.ReflectionUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -11,7 +11,6 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-import com.xh.basic.redis.util.ReflectionUtils;
 
 import java.lang.reflect.Method;
 import java.util.Set;
@@ -30,6 +29,8 @@ public class CacheAspect {
 
     @Autowired
     private RedisServiceImpl redisService;
+
+    private static Pattern pattern = Pattern.compile("[0-9]*");
 
     @Pointcut("@annotation(com.xh.basic.redis.annotation.MCache)")
     public void cacheAspect(){}
@@ -81,11 +82,11 @@ public class CacheAspect {
                     if(methodCache != null && methodCache.cacheType() == MCache.MCacheType.QUERY && methodCache.cacheGroup().equals(group)) {
                         //如果为keyValue为-1，对应查询缓存全部清楚
                         String queryKey = className+"_" + method.getName() + "_" + methodCache.cacheGroup() + "_*";
-                        if(keyValue.equals("-1")) {
+                        if("-1".equals(queryKey)) {
                             redisService.batchDelRedis(queryKey.trim());
                             break;
                         }
-                        if(!keyValue.equals("")) {
+                        if(!"".equals(queryKey)) {
                             Set<String> queryKeys = redisService.getKeys(queryKey);
                             boolean isbreak = false;
                             for (String queryValue : queryKeys) {
@@ -111,13 +112,13 @@ public class CacheAspect {
 
     private String getKeyValue(Object[] arguments, String keyOrIdx){
         String key = "";
-        if (keyOrIdx.equals("-1")){
-            return "-1";
+        String index = "-1";
+        if (index.equals(keyOrIdx)){
+            return index;
         }
         String[] keys = keyOrIdx.split(",");
         if (arguments != null && arguments.length>0){
             for(String k : keys){
-                Pattern pattern = Pattern.compile("[0-9]*");
                 //判断是否有数字
                 boolean isNumber = pattern.matcher(k).matches();
                 //如果是数字，获取参数下标，不是数字的话获取第一个参数对象的对应属性值

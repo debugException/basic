@@ -20,6 +20,9 @@ public @interface MCache {
     int cacheTime() default  180;
 
     public enum MCacheType{
-        QUERY,NOT_QUERY;
+        //查询操作
+        QUERY,
+        //非查询操作
+        NOT_QUERY;
     }
 }

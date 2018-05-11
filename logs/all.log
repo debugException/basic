@@ -1,280 +1,85 @@
-2018-05-02 10:00:13,636  INFO BasicApplication:48 -Starting BasicApplication on PC-20151125WOSC with PID 5116 (E:\idea\basic\target\classes started by Administrator in E:\idea\basic)
-2018-05-02 10:00:13,695  INFO BasicApplication:597 -The following profiles are active: local
-2018-05-02 10:00:14,821  INFO Version:30 -HV000001: Hibernate Validator 5.3.6.Final
-2018-05-02 10:00:16,061  INFO AnnotationConfigEmbeddedWebApplicationContext:583 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@314c5fe4: startup date [Wed May 02 10:00:16 CST 2018]; root of context hierarchy
-2018-05-02 10:00:23,066  INFO RepositoryConfigurationDelegate:165 -Multiple Spring Data modules found, entering strict repository configuration mode!
-2018-05-02 10:00:25,088  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fd59dce] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 10:00:28,161  INFO TomcatEmbeddedServletContainer:89 -Tomcat initialized with port(s): 8080 (http)
-2018-05-02 10:00:28,365  INFO ContextLoader:276 -Root WebApplicationContext: initialization completed in 12308 ms
-2018-05-02 10:00:28,785  INFO ServletRegistrationBean:190 -Mapping servlet: 'dispatcherServlet' to [/]
-2018-05-02 10:00:28,786  INFO ServletRegistrationBean:190 -Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-05-02 10:00:28,789  INFO FilterRegistrationBean:258 -Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-05-02 10:00:28,789  INFO FilterRegistrationBean:258 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-05-02 10:00:28,790  INFO FilterRegistrationBean:258 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-05-02 10:00:28,790  INFO FilterRegistrationBean:258 -Mapping filter: 'requestContextFilter' to: [/*]
-2018-05-02 10:00:28,790  INFO FilterRegistrationBean:271 -Mapping filter: 'webStatFilter' to urls: [/*]
-2018-05-02 10:00:29,813  INFO SessionFactoryConfig:42 -createSqlSessionFactoryBean method
-2018-05-02 10:00:31,934  INFO RequestMappingHandlerAdapter:534 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@314c5fe4: startup date [Wed May 02 10:00:16 CST 2018]; root of context hierarchy
-2018-05-02 10:00:32,033  INFO RequestMappingHandlerMapping:543 -Mapped "{[/],methods=[POST]}" onto public java.lang.String com.xh.basic.controller.FileUploadController.handleFileUpload(org.springframework.web.multipart.MultipartFile,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-05-02 10:00:32,034  INFO RequestMappingHandlerMapping:543 -Mapped "{[/files/{filename:.+}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.xh.basic.controller.FileUploadController.serverFile(java.lang.String)
-2018-05-02 10:00:32,034  INFO RequestMappingHandlerMapping:543 -Mapped "{[/],methods=[GET]}" onto public java.lang.String com.xh.basic.controller.FileUploadController.listUploadFiles(org.springframework.ui.Model) throws java.io.IOException
-2018-05-02 10:00:32,035  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/hello],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.hello()
-2018-05-02 10:00:32,036  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectById],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectById(java.lang.Integer)
-2018-05-02 10:00:32,036  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectByUserName],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectByUserName(java.lang.String)
-2018-05-02 10:00:32,036  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/jsonRst],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.UserInfoController.getJsonRst()
-2018-05-02 10:00:32,038  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-05-02 10:00:32,038  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-05-02 10:00:32,082  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-05-02 10:00:32,082  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-05-02 10:00:32,115  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-05-02 10:00:33,668  INFO OptionalLiveReloadServer:58 -LiveReload server is running on port 35729
-2018-05-02 10:00:33,757  INFO AnnotationMBeanExporter:431 -Registering beans for JMX exposure on startup
-2018-05-02 10:00:33,758  INFO AnnotationMBeanExporter:916 -Bean with name 'primaryDataSource' has been autodetected for JMX exposure
-2018-05-02 10:00:33,759  INFO AnnotationMBeanExporter:916 -Bean with name 'slaveDataSource' has been autodetected for JMX exposure
-2018-05-02 10:00:33,759  INFO AnnotationMBeanExporter:916 -Bean with name 'statFilter' has been autodetected for JMX exposure
-2018-05-02 10:00:33,760  INFO AnnotationMBeanExporter:916 -Bean with name 'wallConfig' has been autodetected for JMX exposure
-2018-05-02 10:00:33,760  INFO AnnotationMBeanExporter:916 -Bean with name 'wallFilter' has been autodetected for JMX exposure
-2018-05-02 10:00:33,764  INFO AnnotationMBeanExporter:671 -Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=primaryDataSource,type=DruidDataSourceWrapper]
-2018-05-02 10:00:33,781  INFO AnnotationMBeanExporter:671 -Located MBean 'slaveDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=slaveDataSource,type=DruidDataSourceWrapper]
-2018-05-02 10:00:33,782  INFO AnnotationMBeanExporter:671 -Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
-2018-05-02 10:00:33,783  INFO AnnotationMBeanExporter:671 -Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
-2018-05-02 10:00:33,784  INFO AnnotationMBeanExporter:671 -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
-2018-05-02 10:00:34,178  INFO TomcatEmbeddedServletContainer:201 -Tomcat started on port(s): 8080 (http)
-2018-05-02 10:00:34,208  INFO BasicApplication:57 -Started BasicApplication in 23.918 seconds (JVM running for 25.827)
-2018-05-02 10:01:04,052  INFO DispatcherServlet:489 -FrameworkServlet 'dispatcherServlet': initialization started
-2018-05-02 10:01:04,081  INFO DispatcherServlet:508 -FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
-2018-05-02 16:47:58,384  INFO BasicApplication:48 -Starting BasicApplication on PC-20151125WOSC with PID 12040 (E:\idea\basic\target\classes started by Administrator in E:\idea\basic)
-2018-05-02 16:47:58,479  INFO BasicApplication:597 -The following profiles are active: local
-2018-05-02 16:47:59,809  INFO Version:30 -HV000001: Hibernate Validator 5.3.6.Final
-2018-05-02 16:48:00,330  INFO AnnotationConfigEmbeddedWebApplicationContext:583 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@221a7932: startup date [Wed May 02 16:48:00 CST 2018]; root of context hierarchy
-2018-05-02 16:48:02,672  INFO RepositoryConfigurationDelegate:165 -Multiple Spring Data modules found, entering strict repository configuration mode!
-2018-05-02 16:48:03,364  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$25e74775] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:03,504  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'shiroConfig' of type [com.xh.basic.config.ShiroConfig$$EnhancerBySpringCGLIB$$5fcbfdb2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:03,814  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'druidConfig' of type [com.xh.basic.datasource.config.DruidConfig$$EnhancerBySpringCGLIB$$b8f54a8a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:04,016  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:04,025  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:04,320  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:04,413  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:04,530  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:04,836  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'primaryDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:05,060  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'slaveDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:05,070  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'dynamicDataSource' of type [com.xh.basic.datasource.DynamicDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:05,073  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'sessionFactoryConfig' of type [com.xh.basic.datasource.config.SessionFactoryConfig$$EnhancerBySpringCGLIB$$d2968ec4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:05,079  INFO SessionFactoryConfig:42 -createSqlSessionFactoryBean method
-2018-05-02 16:48:06,264  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'sqlSessionFactory' of type [org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:06,268  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:06,282  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:06,285  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:06,341  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'userMapper' of type [com.sun.proxy.$Proxy79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:06,377  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'customRealm' of type [com.xh.basic.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:06,446  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:48:06,451  INFO ShiroConfig:64 -Shiro拦截器工厂类注入成功！
-2018-05-02 16:48:08,263  INFO TomcatEmbeddedServletContainer:89 -Tomcat initialized with port(s): 8080 (http)
-2018-05-02 16:48:08,444  INFO ContextLoader:276 -Root WebApplicationContext: initialization completed in 8134 ms
-2018-05-02 16:48:08,683  INFO ServletRegistrationBean:190 -Mapping servlet: 'dispatcherServlet' to [/]
-2018-05-02 16:48:08,684  INFO ServletRegistrationBean:190 -Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-05-02 16:48:08,687  INFO FilterRegistrationBean:258 -Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-05-02 16:48:08,688  INFO FilterRegistrationBean:258 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-05-02 16:48:08,688  INFO FilterRegistrationBean:258 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-05-02 16:48:08,688  INFO FilterRegistrationBean:258 -Mapping filter: 'requestContextFilter' to: [/*]
-2018-05-02 16:48:08,689  INFO FilterRegistrationBean:271 -Mapping filter: 'webStatFilter' to urls: [/*]
-2018-05-02 16:48:08,689  INFO FilterRegistrationBean:258 -Mapping filter: 'shiroFilter' to: [/*]
-2018-05-02 16:48:09,494  INFO RequestMappingHandlerAdapter:534 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@221a7932: startup date [Wed May 02 16:48:00 CST 2018]; root of context hierarchy
-2018-05-02 16:48:09,559  INFO RequestMappingHandlerMapping:543 -Mapped "{[/admin/getMessage],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.AdminController.getMessage()
-2018-05-02 16:48:09,562  INFO RequestMappingHandlerMapping:543 -Mapped "{[/files/{filename:.+}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.xh.basic.controller.FileUploadController.serverFile(java.lang.String)
-2018-05-02 16:48:09,562  INFO RequestMappingHandlerMapping:543 -Mapped "{[/],methods=[GET]}" onto public java.lang.String com.xh.basic.controller.FileUploadController.listUploadFiles(org.springframework.ui.Model) throws java.io.IOException
-2018-05-02 16:48:09,563  INFO RequestMappingHandlerMapping:543 -Mapped "{[/],methods=[POST]}" onto public java.lang.String com.xh.basic.controller.FileUploadController.handleFileUpload(org.springframework.web.multipart.MultipartFile,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-05-02 16:48:09,563  INFO RequestMappingHandlerMapping:543 -Mapped "{[/guest/getMessage],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.GuestController.submitLogin()
-2018-05-02 16:48:09,564  INFO RequestMappingHandlerMapping:543 -Mapped "{[/guest/enter],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.GuestController.login()
-2018-05-02 16:48:09,564  INFO RequestMappingHandlerMapping:543 -Mapped "{[/login],methods=[POST]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.LoginController.login(java.lang.String,java.lang.String)
-2018-05-02 16:48:09,564  INFO RequestMappingHandlerMapping:543 -Mapped "{[/notLogin],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.LoginController.notLogin()
-2018-05-02 16:48:09,565  INFO RequestMappingHandlerMapping:543 -Mapped "{[/notRole],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.LoginController.notRole()
-2018-05-02 16:48:09,565  INFO RequestMappingHandlerMapping:543 -Mapped "{[/logout],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.LoginController.logout()
-2018-05-02 16:48:09,566  INFO RequestMappingHandlerMapping:543 -Mapped "{[/user/getMessage],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.UserController.getMessage()
-2018-05-02 16:48:09,567  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/hello],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.hello()
-2018-05-02 16:48:09,567  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectById],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectById(java.lang.Integer)
-2018-05-02 16:48:09,567  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectByUserName],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectByUserName(java.lang.String)
-2018-05-02 16:48:09,568  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/jsonRst],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.UserInfoController.getJsonRst()
-2018-05-02 16:48:09,570  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-05-02 16:48:09,570  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-05-02 16:48:09,610  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-05-02 16:48:09,610  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-05-02 16:48:09,659  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-05-02 16:48:10,451  INFO OptionalLiveReloadServer:58 -LiveReload server is running on port 35729
-2018-05-02 16:48:10,508  INFO AnnotationMBeanExporter:431 -Registering beans for JMX exposure on startup
-2018-05-02 16:48:10,519  INFO AnnotationMBeanExporter:916 -Bean with name 'primaryDataSource' has been autodetected for JMX exposure
-2018-05-02 16:48:10,520  INFO AnnotationMBeanExporter:916 -Bean with name 'slaveDataSource' has been autodetected for JMX exposure
-2018-05-02 16:48:10,520  INFO AnnotationMBeanExporter:916 -Bean with name 'statFilter' has been autodetected for JMX exposure
-2018-05-02 16:48:10,520  INFO AnnotationMBeanExporter:916 -Bean with name 'wallConfig' has been autodetected for JMX exposure
-2018-05-02 16:48:10,521  INFO AnnotationMBeanExporter:916 -Bean with name 'wallFilter' has been autodetected for JMX exposure
-2018-05-02 16:48:10,525  INFO AnnotationMBeanExporter:671 -Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=primaryDataSource,type=DruidDataSourceWrapper]
-2018-05-02 16:48:10,543  INFO AnnotationMBeanExporter:671 -Located MBean 'slaveDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=slaveDataSource,type=DruidDataSourceWrapper]
-2018-05-02 16:48:10,544  INFO AnnotationMBeanExporter:671 -Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
-2018-05-02 16:48:10,545  INFO AnnotationMBeanExporter:671 -Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
-2018-05-02 16:48:10,546  INFO AnnotationMBeanExporter:671 -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
-2018-05-02 16:48:10,657  INFO TomcatEmbeddedServletContainer:201 -Tomcat started on port(s): 8080 (http)
-2018-05-02 16:48:10,666  INFO AutoConfigurationReportLoggingInitializer:101 -
-
-Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2018-05-02 16:48:10,670 ERROR SpringApplication:771 -Application startup failed
-java.lang.IllegalStateException: Failed to execute CommandLineRunner
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:735)
-	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:716)
-	at org.springframework.boot.SpringApplication.afterRefresh(SpringApplication.java:703)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:304)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107)
-	at com.xh.basic.BasicApplication.main(BasicApplication.java:13)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: com.xh.basic.exception.StorageException: Could not initialize storage
-	at com.xh.basic.service.impl.FileSystemStorageService.init(FileSystemStorageService.java:86)
-	at com.xh.basic.BasicApplication.lambda$init$0(BasicApplication.java:20)
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:732)
-	... 11 more
-Caused by: java.nio.file.AccessDeniedException: upload-dir
-	at sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:83)
-	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:97)
-	at sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:102)
-	at sun.nio.fs.WindowsFileSystemProvider.createDirectory(WindowsFileSystemProvider.java:504)
-	at java.nio.file.Files.createDirectory(Files.java:674)
-	at com.xh.basic.service.impl.FileSystemStorageService.init(FileSystemStorageService.java:84)
-	... 13 more
-2018-05-02 16:48:10,724  INFO AnnotationConfigEmbeddedWebApplicationContext:984 -Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@221a7932: startup date [Wed May 02 16:48:00 CST 2018]; root of context hierarchy
-2018-05-02 16:48:10,727  INFO AnnotationMBeanExporter:449 -Unregistering JMX-exposed beans on shutdown
-2018-05-02 16:48:10,727  INFO AnnotationMBeanExporter:241 -Unregistering JMX-exposed beans
-2018-05-02 16:51:49,319  INFO BasicApplication:48 -Starting BasicApplication on PC-20151125WOSC with PID 10724 (E:\idea\basic\target\classes started by Administrator in E:\idea\basic)
-2018-05-02 16:51:49,321  INFO BasicApplication:597 -The following profiles are active: local
-2018-05-02 16:51:49,614  INFO Version:30 -HV000001: Hibernate Validator 5.3.6.Final
-2018-05-02 16:51:49,721  INFO AnnotationConfigEmbeddedWebApplicationContext:583 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3cd950d0: startup date [Wed May 02 16:51:49 CST 2018]; root of context hierarchy
-2018-05-02 16:51:50,256  INFO RepositoryConfigurationDelegate:165 -Multiple Spring Data modules found, entering strict repository configuration mode!
-2018-05-02 16:51:50,594  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4a6ffdd2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:50,684  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'shiroConfig' of type [com.xh.basic.config.ShiroConfig$$EnhancerBySpringCGLIB$$8454b40f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:50,753  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'druidConfig' of type [com.xh.basic.datasource.config.DruidConfig$$EnhancerBySpringCGLIB$$dd7e00e7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:50,861  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:50,868  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,086  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,166  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,272  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,567  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'primaryDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,814  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'slaveDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,824  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'dynamicDataSource' of type [com.xh.basic.datasource.DynamicDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,827  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'sessionFactoryConfig' of type [com.xh.basic.datasource.config.SessionFactoryConfig$$EnhancerBySpringCGLIB$$f71f4521] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,829  INFO SessionFactoryConfig:42 -createSqlSessionFactoryBean method
-2018-05-02 16:51:51,962  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'sqlSessionFactory' of type [org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,964  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,975  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,977  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,979  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'userMapper' of type [com.sun.proxy.$Proxy79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,982  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'customRealm' of type [com.xh.basic.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,994  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-05-02 16:51:51,998  INFO ShiroConfig:64 -Shiro拦截器工厂类注入成功！
-2018-05-02 16:51:52,358  INFO TomcatEmbeddedServletContainer:89 -Tomcat initialized with port(s): 8080 (http)
-2018-05-02 16:51:52,415  INFO ContextLoader:276 -Root WebApplicationContext: initialization completed in 2696 ms
-2018-05-02 16:51:52,554  INFO ServletRegistrationBean:190 -Mapping servlet: 'dispatcherServlet' to [/]
-2018-05-02 16:51:52,555  INFO ServletRegistrationBean:190 -Mapping servlet: 'statViewServlet' to [/druid/*]
-2018-05-02 16:51:52,557  INFO FilterRegistrationBean:258 -Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-05-02 16:51:52,558  INFO FilterRegistrationBean:258 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-05-02 16:51:52,558  INFO FilterRegistrationBean:258 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-05-02 16:51:52,558  INFO FilterRegistrationBean:258 -Mapping filter: 'requestContextFilter' to: [/*]
-2018-05-02 16:51:52,558  INFO FilterRegistrationBean:271 -Mapping filter: 'webStatFilter' to urls: [/*]
-2018-05-02 16:51:52,558  INFO FilterRegistrationBean:258 -Mapping filter: 'shiroFilter' to: [/*]
-2018-05-02 16:51:52,970  INFO RequestMappingHandlerAdapter:534 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3cd950d0: startup date [Wed May 02 16:51:49 CST 2018]; root of context hierarchy
-2018-05-02 16:51:53,013  INFO RequestMappingHandlerMapping:543 -Mapped "{[/admin/getMessage],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.AdminController.getMessage()
-2018-05-02 16:51:53,016  INFO RequestMappingHandlerMapping:543 -Mapped "{[/files/{filename:.+}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.xh.basic.controller.FileUploadController.serverFile(java.lang.String)
-2018-05-02 16:51:53,016  INFO RequestMappingHandlerMapping:543 -Mapped "{[/],methods=[GET]}" onto public java.lang.String com.xh.basic.controller.FileUploadController.listUploadFiles(org.springframework.ui.Model) throws java.io.IOException
-2018-05-02 16:51:53,017  INFO RequestMappingHandlerMapping:543 -Mapped "{[/],methods=[POST]}" onto public java.lang.String com.xh.basic.controller.FileUploadController.handleFileUpload(org.springframework.web.multipart.MultipartFile,org.springframework.web.servlet.mvc.support.RedirectAttributes)
-2018-05-02 16:51:53,017  INFO RequestMappingHandlerMapping:543 -Mapped "{[/guest/getMessage],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.GuestController.submitLogin()
-2018-05-02 16:51:53,017  INFO RequestMappingHandlerMapping:543 -Mapped "{[/guest/enter],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.GuestController.login()
-2018-05-02 16:51:53,018  INFO RequestMappingHandlerMapping:543 -Mapped "{[/login],methods=[POST]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.LoginController.login(java.lang.String,java.lang.String)
-2018-05-02 16:51:53,018  INFO RequestMappingHandlerMapping:543 -Mapped "{[/notLogin],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.LoginController.notLogin()
-2018-05-02 16:51:53,018  INFO RequestMappingHandlerMapping:543 -Mapped "{[/notRole],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.LoginController.notRole()
-2018-05-02 16:51:53,019  INFO RequestMappingHandlerMapping:543 -Mapped "{[/logout],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.LoginController.logout()
-2018-05-02 16:51:53,019  INFO RequestMappingHandlerMapping:543 -Mapped "{[/user/getMessage],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.UserController.getMessage()
-2018-05-02 16:51:53,020  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/hello],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.hello()
-2018-05-02 16:51:53,020  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectById],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectById(java.lang.Integer)
-2018-05-02 16:51:53,021  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectByUserName],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectByUserName(java.lang.String)
-2018-05-02 16:51:53,021  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/jsonRst],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.UserInfoController.getJsonRst()
-2018-05-02 16:51:53,022  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-05-02 16:51:53,023  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-05-02 16:51:53,053  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-05-02 16:51:53,054  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-05-02 16:51:53,086  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-05-02 16:51:53,587  INFO OptionalLiveReloadServer:58 -LiveReload server is running on port 35729
-2018-05-02 16:51:53,644  INFO AnnotationMBeanExporter:431 -Registering beans for JMX exposure on startup
-2018-05-02 16:51:53,645  INFO AnnotationMBeanExporter:916 -Bean with name 'primaryDataSource' has been autodetected for JMX exposure
-2018-05-02 16:51:53,645  INFO AnnotationMBeanExporter:916 -Bean with name 'slaveDataSource' has been autodetected for JMX exposure
-2018-05-02 16:51:53,646  INFO AnnotationMBeanExporter:916 -Bean with name 'statFilter' has been autodetected for JMX exposure
-2018-05-02 16:51:53,646  INFO AnnotationMBeanExporter:916 -Bean with name 'wallConfig' has been autodetected for JMX exposure
-2018-05-02 16:51:53,646  INFO AnnotationMBeanExporter:916 -Bean with name 'wallFilter' has been autodetected for JMX exposure
-2018-05-02 16:51:53,650  INFO AnnotationMBeanExporter:671 -Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=primaryDataSource,type=DruidDataSourceWrapper]
-2018-05-02 16:51:53,652  INFO AnnotationMBeanExporter:671 -Located MBean 'slaveDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=slaveDataSource,type=DruidDataSourceWrapper]
-2018-05-02 16:51:53,653  INFO AnnotationMBeanExporter:671 -Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
-2018-05-02 16:51:53,654  INFO AnnotationMBeanExporter:671 -Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
-2018-05-02 16:51:53,654  INFO AnnotationMBeanExporter:671 -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
-2018-05-02 16:51:53,690  INFO TomcatEmbeddedServletContainer:201 -Tomcat started on port(s): 8080 (http)
-2018-05-02 16:51:53,695  INFO BasicApplication:57 -Started BasicApplication in 4.586 seconds (JVM running for 5.683)
-2018-05-02 16:53:20,199  INFO DispatcherServlet:489 -FrameworkServlet 'dispatcherServlet': initialization started
-2018-05-02 16:53:20,219  INFO DispatcherServlet:508 -FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
-2018-05-02 16:54:38,452  INFO CustomRealm:64 ----身份认证方法---
-2018-05-02 16:54:38,473  INFO DynamicDataSource:19 -数据源为primary
-2018-05-02 16:54:40,906  INFO DruidDataSource:785 -{dataSource-1} inited
-2018-05-02 16:54:40,911 DEBUG getPassword:159 -==>  Preparing: select password from user where username = ? 
-2018-05-02 16:54:40,970 DEBUG getPassword:159 -==> Parameters: admin(String)
-2018-05-02 16:54:41,020 DEBUG getPassword:159 -<==      Total: 0
-2018-05-02 16:55:08,988  INFO CustomRealm:64 ----身份认证方法---
-2018-05-02 16:55:08,988  INFO DynamicDataSource:19 -数据源为primary
-2018-05-02 16:55:08,989 DEBUG getPassword:159 -==>  Preparing: select password from user where username = ? 
-2018-05-02 16:55:08,989 DEBUG getPassword:159 -==> Parameters: zhangsan(String)
-2018-05-02 16:55:09,030 TRACE getPassword:165 -<==    Columns: password
-2018-05-02 16:55:09,031 TRACE getPassword:165 -<==        Row: 123456
-2018-05-02 16:55:09,032 DEBUG getPassword:159 -<==      Total: 1
-2018-05-02 16:55:09,035  INFO DynamicDataSource:19 -数据源为primary
-2018-05-02 16:55:09,035 DEBUG getRole:159 -==>  Preparing: select role from user where username = ? 
-2018-05-02 16:55:09,035 DEBUG getRole:159 -==> Parameters: zhangsan(String)
-2018-05-02 16:55:09,076 TRACE getRole:165 -<==    Columns: role
-2018-05-02 16:55:09,076 TRACE getRole:165 -<==        Row: admin
-2018-05-02 16:55:09,094 DEBUG getRole:159 -<==      Total: 1
-2018-05-02 16:55:38,196  INFO CustomRealm:64 ----身份认证方法---
-2018-05-02 16:55:38,196  INFO DynamicDataSource:19 -数据源为primary
-2018-05-02 16:55:38,197 DEBUG getPassword:159 -==>  Preparing: select password from user where username = ? 
-2018-05-02 16:55:38,197 DEBUG getPassword:159 -==> Parameters: lisi(String)
-2018-05-02 16:55:38,238 TRACE getPassword:165 -<==    Columns: password
-2018-05-02 16:55:38,238 TRACE getPassword:165 -<==        Row: 123456
-2018-05-02 16:55:38,238 DEBUG getPassword:159 -<==      Total: 1
-2018-05-02 16:55:38,240  INFO DynamicDataSource:19 -数据源为primary
-2018-05-02 16:55:38,241 DEBUG getRole:159 -==>  Preparing: select role from user where username = ? 
-2018-05-02 16:55:38,242 DEBUG getRole:159 -==> Parameters: lisi(String)
-2018-05-02 16:55:38,283 TRACE getRole:165 -<==    Columns: role
-2018-05-02 16:55:38,284 TRACE getRole:165 -<==        Row: user
-2018-05-02 16:55:38,284 DEBUG getRole:159 -<==      Total: 1
-2018-05-02 16:55:51,086  INFO CustomRealm:41 ----权限认证---
-2018-05-02 16:55:51,087  INFO DynamicDataSource:19 -数据源为primary
-2018-05-02 16:55:51,088 DEBUG getRole:159 -==>  Preparing: select role from user where username = ? 
-2018-05-02 16:55:51,089 DEBUG getRole:159 -==> Parameters: lisi(String)
-2018-05-02 16:55:51,131 TRACE getRole:165 -<==    Columns: role
-2018-05-02 16:55:51,131 TRACE getRole:165 -<==        Row: user
-2018-05-02 16:55:51,131 DEBUG getRole:159 -<==      Total: 1
-2018-05-02 16:56:44,466  INFO CustomRealm:64 ----身份认证方法---
-2018-05-02 16:56:44,466  INFO DynamicDataSource:19 -数据源为primary
-2018-05-02 16:56:44,467 DEBUG getPassword:159 -==>  Preparing: select password from user where username = ? 
-2018-05-02 16:56:44,468 DEBUG getPassword:159 -==> Parameters: zhangsan(String)
-2018-05-02 16:56:44,507 TRACE getPassword:165 -<==    Columns: password
-2018-05-02 16:56:44,508 TRACE getPassword:165 -<==        Row: 123456
-2018-05-02 16:56:44,508 DEBUG getPassword:159 -<==      Total: 1
-2018-05-02 16:56:44,509  INFO DynamicDataSource:19 -数据源为primary
-2018-05-02 16:56:44,510 DEBUG getRole:159 -==>  Preparing: select role from user where username = ? 
-2018-05-02 16:56:44,510 DEBUG getRole:159 -==> Parameters: zhangsan(String)
-2018-05-02 16:56:44,550 TRACE getRole:165 -<==    Columns: role
-2018-05-02 16:56:44,551 TRACE getRole:165 -<==        Row: admin
-2018-05-02 16:56:44,551 DEBUG getRole:159 -<==      Total: 1
-2018-05-02 16:56:46,387  INFO CustomRealm:41 ----权限认证---
-2018-05-02 16:56:46,388  INFO DynamicDataSource:19 -数据源为primary
-2018-05-02 16:56:46,388 DEBUG getRole:159 -==>  Preparing: select role from user where username = ? 
-2018-05-02 16:56:46,389 DEBUG getRole:159 -==> Parameters: zhangsan(String)
-2018-05-02 16:56:46,430 TRACE getRole:165 -<==    Columns: role
-2018-05-02 16:56:46,431 TRACE getRole:165 -<==        Row: admin
-2018-05-02 16:56:46,433 DEBUG getRole:159 -<==      Total: 1
+2018-05-09 11:36:22,072  INFO BasicApplication:48 -Starting BasicApplication on PC-20151125WOSC with PID 9968 (E:\idea\basic\target\classes started by Administrator in E:\idea\basic)
+2018-05-09 11:36:22,089  INFO BasicApplication:597 -The following profiles are active: local
+2018-05-09 11:36:22,372  INFO Version:30 -HV000001: Hibernate Validator 5.3.6.Final
+2018-05-09 11:36:22,459  INFO AnnotationConfigEmbeddedWebApplicationContext:583 -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2eddf42: startup date [Wed May 09 11:36:22 CST 2018]; root of context hierarchy
+2018-05-09 11:36:24,658  INFO RepositoryConfigurationDelegate:165 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-09 11:36:25,197  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'shiroConfig' of type [com.xh.basic.config.ShiroConfig$$EnhancerBySpringCGLIB$$10771c06] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:25,258  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'druidConfig' of type [com.xh.basic.datasource.config.DruidConfig$$EnhancerBySpringCGLIB$$69a068de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:25,497  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:25,500  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:25,861  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:25,898  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'wallConfig' of type [com.alibaba.druid.wall.WallConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:25,996  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'wallFilter' of type [com.alibaba.druid.wall.WallFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:26,234  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'primaryDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:26,414  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'slaveDataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:26,418  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'dynamicDataSource' of type [com.xh.basic.datasource.DynamicDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:26,419  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'sessionFactoryConfig' of type [com.xh.basic.datasource.config.SessionFactoryConfig$$EnhancerBySpringCGLIB$$8341ad18] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:26,421  INFO SessionFactoryConfig:42 -createSqlSessionFactoryBean method
+2018-05-09 11:36:27,212  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'sqlSessionFactory' of type [org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:27,213  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:27,221  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:27,222  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:27,240  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'userMapper' of type [com.sun.proxy.$Proxy61] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:27,250  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'customRealm' of type [com.xh.basic.shiro.CustomRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:27,485  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:27,837  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:27,913  INFO PostProcessorRegistrationDelegate$BeanPostProcessorChecker:327 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d69265c9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-09 11:36:28,832  INFO TomcatEmbeddedServletContainer:89 -Tomcat initialized with port(s): 8080 (http)
+2018-05-09 11:36:28,918  INFO ContextLoader:276 -Root WebApplicationContext: initialization completed in 6468 ms
+2018-05-09 11:36:29,198  INFO ServletRegistrationBean:190 -Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-09 11:36:29,199  INFO ServletRegistrationBean:190 -Mapping servlet: 'statViewServlet' to [/druid/*]
+2018-05-09 11:36:29,201  INFO FilterRegistrationBean:258 -Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-09 11:36:29,202  INFO FilterRegistrationBean:258 -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-09 11:36:29,202  INFO FilterRegistrationBean:258 -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-09 11:36:29,202  INFO FilterRegistrationBean:258 -Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-09 11:36:29,202  INFO FilterRegistrationBean:271 -Mapping filter: 'webStatFilter' to urls: [/*]
+2018-05-09 11:36:29,202  INFO FilterRegistrationBean:258 -Mapping filter: 'factory' to: [/*]
+2018-05-09 11:36:29,592  INFO ThreadPoolTaskExecutor:165 -Initializing ExecutorService  'taskExecutor'
+2018-05-09 11:36:30,056  INFO RequestMappingHandlerAdapter:534 -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2eddf42: startup date [Wed May 09 11:36:22 CST 2018]; root of context hierarchy
+2018-05-09 11:36:30,132  INFO RequestMappingHandlerMapping:543 -Mapped "{[/admin/getMessage],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.AdminController.getMessage()
+2018-05-09 11:36:30,133  INFO RequestMappingHandlerMapping:543 -Mapped "{[/admin/getUser],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.AdminController.getUser()
+2018-05-09 11:36:30,134  INFO RequestMappingHandlerMapping:543 -Mapped "{[/admin/banUser],methods=[POST]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.AdminController.updateStatus(java.lang.String)
+2018-05-09 11:36:30,134  INFO RequestMappingHandlerMapping:543 -Mapped "{[/files/{filename:.+}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> com.xh.basic.controller.FileUploadController.serverFile(java.lang.String)
+2018-05-09 11:36:30,135  INFO RequestMappingHandlerMapping:543 -Mapped "{[/],methods=[GET]}" onto public java.lang.String com.xh.basic.controller.FileUploadController.listUploadFiles(org.springframework.ui.Model) throws java.io.IOException
+2018-05-09 11:36:30,135  INFO RequestMappingHandlerMapping:543 -Mapped "{[/],methods=[POST]}" onto public java.lang.String com.xh.basic.controller.FileUploadController.handleFileUpload(org.springframework.web.multipart.MultipartFile,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2018-05-09 11:36:30,136  INFO RequestMappingHandlerMapping:543 -Mapped "{[/guest/getMessage],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.GuestController.submitLogin()
+2018-05-09 11:36:30,136  INFO RequestMappingHandlerMapping:543 -Mapped "{[/guest/enter],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.GuestController.login()
+2018-05-09 11:36:30,136  INFO RequestMappingHandlerMapping:543 -Mapped "{[/login],methods=[POST]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-09 11:36:30,136  INFO RequestMappingHandlerMapping:543 -Mapped "{[/unauthorized/{message}]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.LoginController.unauthorized(java.lang.String) throws java.io.UnsupportedEncodingException
+2018-05-09 11:36:30,137  INFO RequestMappingHandlerMapping:543 -Mapped "{[/user/getMessage],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.UserController.getMessage()
+2018-05-09 11:36:30,138  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/hello],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.hello()
+2018-05-09 11:36:30,138  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectById],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectById(java.lang.Integer)
+2018-05-09 11:36:30,139  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/selectByUserName],methods=[POST]}" onto public com.xh.basic.bean.ResponseBean com.xh.basic.controller.UserInfoController.selectByUserName(java.lang.String)
+2018-05-09 11:36:30,139  INFO RequestMappingHandlerMapping:543 -Mapped "{[/userInfo/jsonRst],methods=[GET]}" onto public com.xh.basic.bean.Resp com.xh.basic.controller.UserInfoController.getJsonRst()
+2018-05-09 11:36:30,140  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-09 11:36:30,141  INFO RequestMappingHandlerMapping:543 -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-09 11:36:30,209  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-09 11:36:30,209  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-09 11:36:30,274  INFO SimpleUrlHandlerMapping:362 -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-09 11:36:31,133  INFO OptionalLiveReloadServer:58 -LiveReload server is running on port 35729
+2018-05-09 11:36:31,191  INFO AnnotationMBeanExporter:431 -Registering beans for JMX exposure on startup
+2018-05-09 11:36:31,191  INFO AnnotationMBeanExporter:916 -Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-09 11:36:31,192  INFO AnnotationMBeanExporter:916 -Bean with name 'slaveDataSource' has been autodetected for JMX exposure
+2018-05-09 11:36:31,192  INFO AnnotationMBeanExporter:916 -Bean with name 'statFilter' has been autodetected for JMX exposure
+2018-05-09 11:36:31,192  INFO AnnotationMBeanExporter:916 -Bean with name 'wallConfig' has been autodetected for JMX exposure
+2018-05-09 11:36:31,193  INFO AnnotationMBeanExporter:916 -Bean with name 'wallFilter' has been autodetected for JMX exposure
+2018-05-09 11:36:31,196  INFO AnnotationMBeanExporter:671 -Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=primaryDataSource,type=DruidDataSourceWrapper]
+2018-05-09 11:36:31,198  INFO AnnotationMBeanExporter:671 -Located MBean 'slaveDataSource': registering with JMX server as MBean [com.alibaba.druid.spring.boot.autoconfigure:name=slaveDataSource,type=DruidDataSourceWrapper]
+2018-05-09 11:36:31,199  INFO AnnotationMBeanExporter:671 -Located MBean 'wallConfig': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallConfig,type=WallConfig]
+2018-05-09 11:36:31,200  INFO AnnotationMBeanExporter:671 -Located MBean 'wallFilter': registering with JMX server as MBean [com.alibaba.druid.wall:name=wallFilter,type=WallFilter]
+2018-05-09 11:36:31,200  INFO AnnotationMBeanExporter:671 -Located MBean 'statFilter': registering with JMX server as MBean [com.alibaba.druid.filter.stat:name=statFilter,type=StatFilter]
+2018-05-09 11:36:31,280  INFO TomcatEmbeddedServletContainer:201 -Tomcat started on port(s): 8080 (http)
+2018-05-09 11:36:31,285  INFO BasicApplication:57 -Started BasicApplication in 9.945 seconds (JVM running for 15.303)
+2018-05-09 11:36:59,118  INFO DispatcherServlet:489 -FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-09 11:36:59,237  INFO DispatcherServlet:508 -FrameworkServlet 'dispatcherServlet': initialization completed in 118 ms
+2018-05-09 11:47:22,752  INFO DynamicDataSource:19 -数据源为primary
+2018-05-09 11:47:25,566  INFO DruidDataSource:785 -{dataSource-1} inited
+2018-05-09 11:47:25,572 DEBUG getPassword:159 -==>  Preparing: select password from user where username = ? 
+2018-05-09 11:47:25,648 DEBUG getPassword:159 -==> Parameters: null
+2018-05-09 11:47:25,706 DEBUG getPassword:159 -<==      Total: 0
+2018-05-09 11:47:57,007  INFO DynamicDataSource:19 -数据源为primary
+2018-05-09 11:47:57,009 DEBUG getPassword:159 -==>  Preparing: select password from user where username = ? 
+2018-05-09 11:47:57,011 DEBUG getPassword:159 -==> Parameters: zhangsan(String)
+2018-05-09 11:47:57,052 TRACE getPassword:165 -<==    Columns: password
+2018-05-09 11:47:57,052 TRACE getPassword:165 -<==        Row: 123456
+2018-05-09 11:47:57,053 DEBUG getPassword:159 -<==      Total: 1

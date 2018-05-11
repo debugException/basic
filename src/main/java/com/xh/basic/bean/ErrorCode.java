@@ -40,9 +40,9 @@ public enum ErrorCode {
     }
 
     public static ErrorCode getByCode(Integer value){
-        for(ErrorCode _enum : values()){
-            if (_enum.getValue() == value){
-                return _enum;
+        for(ErrorCode enums : values()){
+            if (value.equals(enums.getValue())){
+                return enums;
             }
         }
         return null;

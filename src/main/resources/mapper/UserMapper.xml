@@ -87,4 +87,24 @@
   <select id="getPassword" parameterType="java.lang.String" resultType="java.lang.String">
     select password from user where username = #{username, jdbcType=VARCHAR}
   </select>
+
+  <select id="getRolePermission" parameterType="java.lang.String" resultType="java.lang.String">
+    SELECT role.permission FROM `user`, role WHERE username = #{username, jdbcType=VARCHAR} AND `user`.role = role.role
+  </select>
+
+  <select id="getPermission" parameterType="java.lang.String" resultType="java.lang.String">
+    SELECT `user`.permission FROM `user` WHERE username = #{username, jdbcType=VARCHAR}
+  </select>
+
+  <select id="checkUserBanStatus" parameterType="java.lang.String" resultType="java.lang.Integer">
+    select ban from user where username = #{username, jdbcType=VARCHAR}
+  </select>
+
+  <select id="getUser" resultType="String">
+    select username from user;
+  </select>
+
+  <update id="banUser" parameterType="java.lang.String">
+    update user set ban = 1 where  username = #{username, jdbcType=VARCHAR}
+  </update>
 </mapper>

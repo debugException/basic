@@ -1,18 +1,13 @@
 package com.xh.basic.redis.util;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.lang.reflect.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 /**
  * @author szq
@@ -35,7 +30,8 @@ public class ReflectionUtils {
      */
     public static Object invokeGetter(Object obj, String propertyName) {
         Object object = obj;
-        for (String name : StringUtils.split(propertyName, ".")){
+        String splitStr = ".";
+        for (String name : StringUtils.split(propertyName, splitStr)){
             String getterMethodName = GETTER_PREFIX + StringUtils.capitalize(name);
             object = invokeMethod(object, getterMethodName, new Class[] {}, new Object[] {});
         }
@@ -240,8 +236,11 @@ public class ReflectionUtils {
      * 改变private/protected的方法为public，尽量不调用实际改动的语句，避免JDK的SecurityManager抱怨。
      */
     public static void makeAccessible(Method method) {
-        if ((!Modifier.isPublic(method.getModifiers()) || !Modifier.isPublic(method.getDeclaringClass().getModifiers()))
-                && !method.isAccessible()) {
+        boolean flag1 = Modifier.isPublic(method.getModifiers());
+        boolean flag2 = Modifier.isPublic(method.getDeclaringClass().getModifiers());
+        boolean flag3 = method.isAccessible();
+        boolean flag4 = !flag1 || !flag2;
+        if (flag4 && !flag3) {
             method.setAccessible(true);
         }
     }
@@ -250,8 +249,12 @@ public class ReflectionUtils {
      * 改变private/protected的成员变量为public，尽量不调用实际改动的语句，避免JDK的SecurityManager抱怨。
      */
     public static void makeAccessible(Field field) {
-        if ((!Modifier.isPublic(field.getModifiers()) || !Modifier.isPublic(field.getDeclaringClass().getModifiers()) || Modifier
-                .isFinal(field.getModifiers())) && !field.isAccessible()) {
+        boolean flag1 = Modifier.isPublic(field.getModifiers());
+        boolean flag2 = Modifier.isPublic(field.getDeclaringClass().getModifiers());
+        boolean flag3 = Modifier.isFinal(field.getModifiers());
+        boolean flag4 = !flag1 || !flag2 || flag3;
+        boolean flag5 = field.isAccessible();
+        if (flag4 && !flag5) {
             field.setAccessible(true);
         }
     }
@@ -305,7 +308,6 @@ public class ReflectionUtils {
     }
 
     public static Class<?> getUserClass(Object instance) {
-//        Assert.assertNotNull(instance);
         Class clazz = instance.getClass();
         if (clazz != null && clazz.getName().contains(CGLIB_CLASS_SEPARATOR)) {
             Class<?> superClass = clazz.getSuperclass();
